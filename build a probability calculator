@@ -1,5 +1,4 @@
 import random
-
 class Hat:
     def __init__(self, balls):
         self.contents = []
@@ -17,10 +16,8 @@ class Hat:
         for ball in drawn_balls:
             self.contents.remove(ball)
         return drawn_balls
-
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
     success_count = 0
-
     for _ in range(num_experiments):
         # Create a copy of the hat's contents for each experiment
         hat_copy = Hat({ball: hat.contents.count(ball) for ball in set(hat.contents)})
